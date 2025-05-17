@@ -17,8 +17,8 @@ Este proyecto es una API REST desarrollada con Spring Boot y MySQL que permite g
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/DevCarlos2641/PruebaTecnica.git
-cd PruebaTecnica
+git clone https://github.com/DevCarlos2641/prueba-tecnica.git
+cd prueba-tecnica
 ```
 
 2. Asegúrate de tener MySQL corriendo. No necesitas crear la base de datos manualmente, ya que Spring Boot se encargará de ello automáticamente al ejecutar la app.
