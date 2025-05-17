@@ -1,61 +1,112 @@
-# Reto técnico para la vacante de becario
+# 📝 Reto Técnico para la Vacante de Becario
 
-## Requisitos
--  Mysql instalado
+Este proyecto es una API REST desarrollada con Spring Boot y MySQL que permite gestionar tareas tipo "ToDo". Puedes ejecutarla localmente y probar sus funcionalidades mediante Swagger UI.
 
-## 🛠️ Configuración
+---
 
-1. Clona este repositorio:
+## ✅ Requisitos
 
+- Tener **MySQL** instalado y corriendo en el puerto `3306`.
+- Tener **Java 17** y **Gradle** (o usar el wrapper `./gradlew`).
+- Tener una herramienta como Postman o simplemente usar **Swagger UI** para probar los endpoints.
 
-    git clone https://github.com/DevCarlos2641/PruebaTecnica.git
-    cd PruebaTecnica
+---
 
-2. Si ya tiene instalado mysql en el puerto 3306, solamente ejecute la app de Spring boot, la base de datos se crea automáticamente así como la tabla
+## 🚀 Ejecución local
 
-## Pruebas
+1. Clona el repositorio:
 
-Con la ayuda de Swagger puede interarctuar mas facilmente entre los EndPoints
+```bash
+git clone https://github.com/DevCarlos2641/PruebaTecnica.git
+cd PruebaTecnica
+```
 
-http://localhost:8080/reto-tecnico/api/v1/swagger-ui/index.html
+2. Asegúrate de tener MySQL corriendo. No necesitas crear la base de datos manualmente, ya que Spring Boot se encargará de ello automáticamente al ejecutar la app.
 
-1.	Crear un nuevo ToDo (POST)
+3. Ejecuta la aplicación de Spring Boot desde tu IDE o terminal:
 
-    Method: POST
-    url: localhost:8080/reto-tecnico/api/v1/todo
-    body: {
-        "description": "description 1",
-        "date": "2025-04-16",
-        "status": "en progreso"
-    }
+```bash
+./gradlew bootRun
+```
 
-2.	Obtener todos los ToDos (GET)
+---
 
-    Method: GET
-    url: localhost:8080/reto-tecnico/api/v1/todo
+## 📄 Endpoints disponibles
 
-3.	Actualizar la información de un ToDo (PUT)
+Puedes interactuar con la API usando Swagger en:
 
-    Method: PUT
-    Parametros: id
-    url: localhost:8080/reto-tecnico/api/v1/todo/id
-    body:{
-        "description": "Otra descripcion",
-        "date": "2025-04-17",
-        "status": "finalizado"
-    }
+🔗 [http://localhost:8080/reto-tecnico/api/v1/swagger-ui/index.html](http://localhost:8080/reto-tecnico/api/v1/swagger-ui/index.html)
 
-4.	Cambiar únicamente el estatus de un ToDo (PATCH)
+---
 
-    Method: PATCH
-    Parametros: id
-    url: localhost:8080/reto-tecnico/api/v1/todo/id
-    body: {
-        "status": "pendiente"
-    }
+## 📬 Pruebas de la API
 
-5.	Eliminar un ToDo por ID (DELETE)
-    
-    Method: DELETE
-    parametros: id
-    url: localhost:8080/reto-tecnico/api/v1/todo/id
+### 1. Crear un nuevo ToDo
+
+- **Método:** `POST`  
+- **URL:** `/reto-tecnico/api/v1/todo`  
+- **Body:**
+
+```json
+{
+  "description": "description 1",
+  "date": "2025-04-16",
+  "status": "en progreso"
+}
+```
+
+---
+
+### 2. Obtener todos los ToDos
+
+- **Método:** `GET`  
+- **URL:** `/reto-tecnico/api/v1/todo`
+
+---
+
+### 3. Actualizar información de un ToDo
+
+- **Método:** `PUT`  
+- **URL:** `/reto-tecnico/api/v1/todo/{id}`  
+- **Body:**
+
+```json
+{
+  "description": "Otra descripcion",
+  "date": "2025-04-17",
+  "status": "finalizado"
+}
+```
+
+---
+
+### 4. Cambiar solo el estado de un ToDo
+
+- **Método:** `PATCH`  
+- **URL:** `/reto-tecnico/api/v1/todo/{id}`  
+- **Body:**
+
+```json
+{
+  "status": "pendiente"
+}
+```
+
+---
+
+### 5. Eliminar un ToDo por ID
+
+- **Método:** `DELETE`  
+- **URL:** `/reto-tecnico/api/v1/todo/{id}`
+
+---
+
+## 🧾 Notas adicionales
+
+- La base de datos y tabla se crean automáticamente al ejecutar la aplicación.
+- Si quieres usar Docker o necesitas una versión con `docker-compose`, puedo ayudarte a agregarlo también.
+
+---
+
+> Desarrollado por Carlos Iván  
+> [GitHub](https://github.com/DevCarlos2641)
