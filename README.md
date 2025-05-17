@@ -27,6 +27,8 @@ cd prueba-tecnica
 
 ```bash
 ./gradlew bootRun
+ó
+gradlew bootRun
 ```
 
 ---
