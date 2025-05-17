@@ -106,7 +106,6 @@ Puedes interactuar con la API usando Swagger en:
 ## 🧾 Notas adicionales
 
 - La base de datos y tabla se crean automáticamente al ejecutar la aplicación.
-- Si quieres usar Docker o necesitas una versión con `docker-compose`, puedo ayudarte a agregarlo también.
 
 ---
 
